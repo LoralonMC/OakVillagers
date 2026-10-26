@@ -1,0 +1,53 @@
+# ============================================================
+# OakVillagers
+# ============================================================
+# Villagers (and wandering traders) never offer a trade that pays
+# the player in a blocked item, emeralds by default, so emeralds
+# only enter the economy through the server's own shops.
+#
+# A blocked trade is not just removed: the villager rerolls from
+# its normal vanilla trade pool, so it still ends up with a full
+# set of trades. Removing alone leaves farmers, shepherds and
+# butchers with no trades at all more than half the time.
+
+# ============================================================
+# GENERAL SETTINGS
+# ============================================================
+enabled: true
+debug: false
+# Trade results villagers may never give. Material names.
+blocked-results:
+  - EMERALD
+# Worlds where villagers are left alone.
+disabled-worlds: []
+# Also block these trades on wandering traders. They are not
+# rerolled: wandering traders have plenty of other trades.
+wandering-traders: true
+
+# ============================================================
+# REROLLING
+# ============================================================
+reroll:
+  enabled: true
+  # Vanilla gives a villager 2 new trades per level. A villager
+  # is topped back up to this many trades per level it has
+  # reached, as far as its trade pool allows.
+  trades-per-level: 2
+  # Rolls tried per top-up. Each roll can come back blocked or
+  # as a trade the villager already has, so this bounds the work
+  # for small pools.
+  max-attempts: 12
+
+# ============================================================
+# EXISTING VILLAGERS
+# ============================================================
+# When a player right-clicks a villager, remove any blocked trades
+# it already has and top it up once for its level. Fixes villagers
+# that were left with no trades before this plugin, the moment
+# someone tries to trade with them.
+heal-on-interact: true
+
+# ========================================
+#          DO NOT EDIT BELOW
+# ========================================
+config-version: 1

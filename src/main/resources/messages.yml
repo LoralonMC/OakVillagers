@@ -1,0 +1,11 @@
+# ============================================================
+# OakVillagers messages
+# ============================================================
+# Set any message to "" to disable it.
+
+# ============================================================
+# COMMAND MESSAGES
+# ============================================================
+commands:
+  reload-success: "<#6C757D>[<#6B7A5E>ᴏᴀᴋʜᴇᴀʀᴛ<#6C757D>] <#f2ebd7>Configuration <#8FAA87>reloaded<#f2ebd7>!"
+  reload-failed: "<#6C757D>[<#C27B6B>ᴇʀʀᴏʀ<#6C757D>] <#f2ebd7>Reload <#C27B6B>failed<#f2ebd7>. Previous settings kept."

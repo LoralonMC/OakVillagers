@@ -1,0 +1,17 @@
+name: OakVillagers
+version: '${version}'
+main: dev.oakheart.oakvillagers.OakVillagers
+description: 'Keeps villagers from ever paying out emeralds, rerolling those trades from the vanilla pool instead of leaving villagers empty.'
+api-version: '26.3'
+authors:
+  - Loralon
+website: https://github.com/LoralonMC/OakVillagers
+permissions:
+  oakvillagers.*:
+    description: 'All OakVillagers permissions'
+    default: op
+    children:
+      oakvillagers.reload: true
+  oakvillagers.reload:
+    description: 'Reload configuration'
+    default: op
