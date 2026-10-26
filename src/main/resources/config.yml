@@ -34,9 +34,11 @@ reroll:
   # reached, as far as its trade pool allows.
   trades-per-level: 2
   # Rolls tried per top-up. Each roll can come back blocked or
-  # as a trade the villager already has, so this bounds the work
-  # for small pools.
-  max-attempts: 12
+  # as a trade the villager already has. A novice farmer or
+  # shepherd has 1 usable trade in 5, so 12 rolls still miss it
+  # 7% of the time and 40 miss it 0.01% of the time. Rolls are
+  # cheap: this only bounds the work for tiny pools.
+  max-attempts: 40
 
 # ============================================================
 # EXISTING VILLAGERS

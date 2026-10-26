@@ -107,7 +107,10 @@ public class TradeFilter {
         } finally {
             toppingUp.remove(villager.getUniqueId());
         }
-        villager.getPersistentDataContainer().set(toppedUpKey, PersistentDataType.INTEGER, level);
+        // A villager left empty by bad luck is retried on the next right-click.
+        if (villager.getRecipeCount() > 0) {
+            villager.getPersistentDataContainer().set(toppedUpKey, PersistentDataType.INTEGER, level);
+        }
         int added = villager.getRecipeCount() - before;
         if (added > 0 || villager.getRecipeCount() < target) {
             debug.log(() -> villager.getProfession().key().value() + " level " + level + " at "

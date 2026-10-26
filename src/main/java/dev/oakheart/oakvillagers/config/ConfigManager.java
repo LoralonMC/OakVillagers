@@ -15,7 +15,7 @@ import java.util.logging.Logger;
 public class ConfigManager {
 
     private static final int DEFAULT_TRADES_PER_LEVEL = 2;
-    private static final int DEFAULT_MAX_ATTEMPTS = 12;
+    private static final int DEFAULT_MAX_ATTEMPTS = 40;
 
     private final OakVillagers plugin;
     private final Logger logger;
